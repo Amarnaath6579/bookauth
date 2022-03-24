@@ -1,0 +1,42 @@
+<p>book works!</p>
+<form [formGroup]="bookForm">
+    <div class="row">
+        <div class="row col-sm-5">
+            <h3 class="title">My http file</h3>
+            <br><br>
+            <div class="form-group">
+                <label for ="bookid">Book Id  </label>
+                <input type = "text" id="bookid" name ="bookid" formControlName="bookid" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for ="bookid">Book Name  </label>
+                <input type = "text" id="bookname" name ="bookname" formControlName="bookname" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for ="author">Author  </label>
+                <input type = "text" id="author" name ="author" formControlName="author" autocomplete="off">
+            </div>
+<div class="form-group">
+    <button class="btn btn-info" (click)="onPushBook()" [disabled]="!bookForm.valid">Push Book</button>
+    <button class="btn btn-success" (click)="onSave()" [disabled]="!bookForm.valid">Submit</button>
+    <button class="btn btn-warning" (click)="onGet()" [disabled]="!bookForm.valid">Get</button>
+</div>
+
+        </div>
+    </div>
+</form>
+
+<div class="col-6 w-25">
+    <table class="table border border-2">
+        <tr>
+            <th class="ali">ID</th>
+            <th class="ali">NAME</th>
+            <th class="ali">AUTHOR</th>
+        </tr>
+        <tr *ngFor="let obj of myBooks">
+            <td class="ali">{{obj.bookid}}</td>
+            <td class="ali">{{obj.bookname}}</td>
+            <td class="ali">{{obj.author}}</td>
+        </tr>
+    </table>
+</div>

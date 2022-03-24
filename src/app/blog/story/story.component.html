@@ -1,0 +1,27 @@
+<!-- <p>story works!</p>
+<button routerLink="/blog/puzzle">Go to puzzle</button> -->
+
+<h3>Story Works</h3>
+
+
+    <div class="row">
+        <div class="row col-sm-5">
+            <h3 class="title">My http file</h3>
+            <br><br>
+            <form [formGroup]="registerForm">
+            <div class="form-group">
+                <label for ="email">Email id </label>
+                <input class="form-control" type = "text" id="email" name ="email" formControlName="email">
+            </div>
+            <div class="form-group">
+                <label for ="password">Password  </label>
+                <input class="form-control" type = "text" id="password" name ="password" formControlName="password">
+            </div>
+            <div class="form-group">
+                <a class="btn btn-warning" (click)="onRegister()">Register</a>
+            </div>
+        </form>
+        </div>
+    </div>
+
+<button class="btn btn-info" routerLink="/blog/puzzle">Go to puzzle</button>

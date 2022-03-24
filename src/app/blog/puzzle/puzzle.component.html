@@ -1,0 +1,24 @@
+
+<!-- <button routerLink="/blog/story">Go to Story</button> -->
+
+
+    <div class="row">
+        <div class="row col-sm-5">
+            <h3 class="title">My http file</h3>
+            <br><br>
+            <form [formGroup]="loginForms">
+            <div class="form-group">
+                <label for ="email">Email id </label>
+                <input class="form-control" type = "email" id="email" name ="email" formControlName="email">
+            </div>
+            <div class="form-group">
+                <label for ="password">Password  </label>
+                <input class="form-control" type = "password" id="password" name ="password" formControlName="password">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-warning" (click)="OnLogin()">Login</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    <button class="btn btn-info" routerLink="/blog/book">Book details</button>
